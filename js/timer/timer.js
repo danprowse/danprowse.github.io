@@ -32,7 +32,13 @@ export class timer {
         if (secondsLeft < 0) {
           clearInterval(countdown);
           timerActive = false;
-          updateCounters();
+          this.updateCounters();
+          if(selectedTimeInMins > 15) {
+            selectedTimeInMins = 5;
+          } else {
+            selectedTimeInMins = 25;
+          }
+          this.displayTimeLeft();
           return;
         }
         // display it
@@ -43,7 +49,7 @@ export class timer {
 
   setTimer() {
     if(timerActive) {
-      // impement modal
+      // implement modal
       prompt("Do you wish to change and stop your current session?");
     }
     selectedTimeInMins = this.dataset.time / 60;
@@ -77,8 +83,12 @@ export class timer {
       case 5:
       case 15:
         ++breakCounter;
+        breakCounterUI.textContent = breakCounter;
+        break;
       case 25:
         ++pomCounter
+        pomoCounterUI.textContent = pomCounter;
+        break;
     }
   }
 }
