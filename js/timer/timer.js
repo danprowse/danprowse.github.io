@@ -1,18 +1,18 @@
+import { updateCounters, init } from './counters.js';
+
 let countdown;
 const DEFAULT_POMO_TIMER = 25;
 let selectedTimeInMins = DEFAULT_POMO_TIMER;
 let timerActive = false;
-let pomCounter = 0;
-let breakCounter = 0;
+
 const timerDisplay = document.querySelector(".display__time-left");
 const endTime = document.querySelector(".display__time-end");
-const pomoCounterUI = document.querySelector(".pomo-counter");
-const breakCounterUI = document.querySelector(".break-counter");
 
 export class timer {
   constructor() {
-    pomoCounterUI.textContent = pomCounter;
-    breakCounterUI.textContent = breakCounter;
+    init();
+    updateCounters();
+    this.displayTimeLeft();
   }
 
   startTimer() {
@@ -26,13 +26,16 @@ export class timer {
       this.displayTimeLeft(seconds);
   
       countdown = setInterval(() => {
+        
         const secondsLeft = Math.round((then - Date.now()) / 1000);
-        // check if we need to stop
         timerActive = true;
+
+        // check if we need to stop
         if (secondsLeft < 0) {
           clearInterval(countdown);
           timerActive = false;
-          this.updateCounters();
+          updateCounters(selectedTimeInMins);
+          // if greater than break amount
           if(selectedTimeInMins > 15) {
             selectedTimeInMins = 5;
           } else {
@@ -41,6 +44,7 @@ export class timer {
           this.displayTimeLeft();
           return;
         }
+
         // display it
         this.displayTimeLeft(secondsLeft);
       }, 1000); 
@@ -76,19 +80,5 @@ export class timer {
     }${remainderSeconds}`;
     timerDisplay.textContent = display;
     console.log({ minutes, remainderSeconds });
-  }
-
-  updateCounters() {
-    switch(selectedTimeInMins) {
-      case 5:
-      case 15:
-        ++breakCounter;
-        breakCounterUI.textContent = breakCounter;
-        break;
-      case 25:
-        ++pomCounter
-        pomoCounterUI.textContent = pomCounter;
-        break;
-    }
   }
 }
