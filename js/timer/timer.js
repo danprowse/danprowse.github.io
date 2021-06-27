@@ -1,4 +1,4 @@
-import { updateCounters, init } from './counters.js';
+import { updateCounters, init } from "./counters.js";
 
 let countdown;
 const DEFAULT_POMO_TIMER = 25;
@@ -17,16 +17,15 @@ export class timer {
 
   startTimer() {
     // clear and existing timers
-    if(!timerActive) {
+    if (!timerActive) {
       clearInterval(countdown);
-  
+
       const now = Date.now();
       const seconds = selectedTimeInMins * 60;
       const then = now + seconds * 1000;
       this.displayTimeLeft(seconds);
-  
+
       countdown = setInterval(() => {
-        
         const secondsLeft = Math.round((then - Date.now()) / 1000);
         timerActive = true;
 
@@ -36,7 +35,7 @@ export class timer {
           timerActive = false;
           updateCounters(selectedTimeInMins);
           // if greater than break amount
-          if(selectedTimeInMins > 15) {
+          if (selectedTimeInMins > 15) {
             selectedTimeInMins = 5;
           } else {
             selectedTimeInMins = 25;
@@ -47,20 +46,18 @@ export class timer {
 
         // display it
         this.displayTimeLeft(secondsLeft);
-      }, 1000); 
-    } 
+      }, 1000);
+    }
   }
 
   setTimer() {
-    if(timerActive) {
-      // implement modal
-      prompt("Do you wish to change and stop your current session?");
+    if (!timerActive) {
+      selectedTimeInMins = this.dataset.time / 60;
+      timerDisplay.textContent = `${
+        selectedTimeInMins < 10 ? `0` : ""
+      }${selectedTimeInMins}:00`;
+      console.log(selectedTimeInMins);
     }
-    selectedTimeInMins = this.dataset.time / 60;
-    timerDisplay.textContent = `${
-      selectedTimeInMins < 10 ? `0` : ""
-    }${selectedTimeInMins}:00`;
-    console.log(selectedTimeInMins);
   }
 
   resetTimer() {
