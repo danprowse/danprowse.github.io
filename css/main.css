@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,8 @@
 
 html {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   width: 100vw;
 }
 
@@ -29,5 +30,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+button,
+h1,
+h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */
