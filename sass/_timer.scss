@@ -1,0 +1,20 @@
+.timer-container {
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 0 5px 0;
+    margin: 1rem;
+    @include flexCenter;
+    flex-direction: column;
+    .display {
+        flex: 2;
+        @include flexCenter;
+        .display__time-left {
+            font-size: 3rem;
+        }
+    }
+    .session-counters {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
