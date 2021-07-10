@@ -24,9 +24,16 @@ body {
     flex-direction: column;
 }
 
-button,
 h1,
 h2 {
     font-family: 'Roboto Slab', serif;
     font-weight: 500;
+}
+
+button {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #333;
+    cursor: pointer;
 }
