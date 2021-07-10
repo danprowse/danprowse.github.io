@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PomoTodo</title>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
     <div class="heading">
-        <h1>PomoTodo</h1>
+      <h1>PomoTodo</h1>
     </div>
     <section class="timer-container">
-        <div class="timer-buttons">
-            <button class="btn btn__start">Start</button>
-            <button class="btn btn__stop">Reset</button>
-        </div>
-        <div class="display">
-            <p class="display__time-left"></p>
-            <p class="display__time-end"></p>
-        </div>
-        <div class="timer-setting-btns">
-            <button data-time="1500">PomoTime</button>
-            <button data-time="900">Break Long</button>
-            <button data-time="300">Break Short</button>
-        </div>
-        <div class="session-counters">
-            <p>Sessions: <span class="pomo-counter"></span></p>
-            <p>Breaks: <span class="break-counter"></span></p>
-        </div>
+      <div class="timer-buttons">
+        <button class="btn btn__start">Start</button>
+        <button class="btn btn__stop">Reset</button>
+      </div>
+      <div class="display">
+        <p class="display__time-left"></p>
+        <p class="display__time-end"></p>
+      </div>
+      <div class="timer-setting-btns">
+        <button data-time="1500">PomoTime</button>
+        <button data-time="900">Break Long</button>
+        <button data-time="300">Break Short</button>
+      </div>
+      <div class="session-counters">
+        <p>Sessions: <span class="pomo-counter"></span></p>
+        <p>Breaks: <span class="break-counter"></span></p>
+      </div>
     </section>
 
     <section class="todos-container">
-        
+      <div class="todos__input">
+          <input type="text">
+          <i class="fas fa-plus icon-add"></i>
+      </div>
+      <div class="todos__list">
+        <p>Your todos will show here</p>
+        <ul></ul>
+      </div>
     </section>
-    
+
     <script type="module" src="/js/app.js" type="module"></script>
-</body>
+  </body>
 </html>

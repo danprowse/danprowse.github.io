@@ -63,6 +63,41 @@ button {
   padding: 0.5rem 0;
 }
 
+.todos-container {
+  min-width: 300px;
+}
+
+.todos__input {
+  position: relative;
+}
+
+.todos__input input {
+  width: 100%;
+  padding: 0.5rem 40px 0.5rem 0.5rem;
+  outline: none;
+}
+
+.todos__input .icon-add {
+  display: inline-block;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  top: 0;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  background-color: #50C878;
+  border: 1px solid;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -74,6 +109,7 @@ html {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  color: #333;
   width: 100vw;
 }
 

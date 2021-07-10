@@ -1,0 +1,23 @@
+.todos-container {
+    min-width: 300px;
+}
+.todos__input {
+    position: relative;
+    input {
+        width: 100%;
+        padding: 0.5rem 40px 0.5rem 0.5rem;
+        outline: none;
+    }
+    .icon-add {
+        display: inline-block;
+        position: absolute;
+        @include flexCenter;
+        font-size: 1rem;
+        top: 0;
+        right: 0;
+        height: 35px;
+        width: 35px;
+        background-color: #50C878;
+        border: 1px solid;
+    }
+}
