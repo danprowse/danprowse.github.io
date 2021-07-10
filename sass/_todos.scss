@@ -1,4 +1,4 @@
-.todos-container {
+.todos {
     min-width: 300px;
 }
 .todos__input {
@@ -7,17 +7,25 @@
         width: 100%;
         padding: 0.5rem 40px 0.5rem 0.5rem;
         outline: none;
+        margin-top: 1rem;
+        font-size: inherit;
     }
     .icon-add {
         display: inline-block;
         position: absolute;
         @include flexCenter;
         font-size: 1rem;
-        top: 0;
+        top: 1rem;
         right: 0;
-        height: 35px;
-        width: 35px;
+        height: 38px;
+        width: 38px;
         background-color: #50C878;
         border: 1px solid;
+    }
+}
+.todos__list-container {
+    p {
+        text-align: center;
+        margin: 0.5rem;
     }
 }
