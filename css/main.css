@@ -67,11 +67,11 @@ button {
   min-width: 300px;
 }
 
-.todos__input {
+.todos__input-container {
   position: relative;
 }
 
-.todos__input input {
+.todos__input-container input {
   width: 100%;
   padding: 0.5rem 40px 0.5rem 0.5rem;
   outline: none;
@@ -79,7 +79,7 @@ button {
   font-size: inherit;
 }
 
-.todos__input .icon-add {
+.todos__input-container .todos__add {
   display: inline-block;
   position: absolute;
   display: -webkit-box;
@@ -98,6 +98,12 @@ button {
   width: 38px;
   background-color: #50C878;
   border: 1px solid;
+}
+
+.todos__input-container .todos__error {
+  text-align: center;
+  font-size: 0.8rem;
+  color: salmon;
 }
 
 .todos__list-container p {

@@ -1,7 +1,7 @@
 .todos {
     min-width: 300px;
 }
-.todos__input {
+.todos__input-container {
     position: relative;
     input {
         width: 100%;
@@ -10,7 +10,7 @@
         margin-top: 1rem;
         font-size: inherit;
     }
-    .icon-add {
+    .todos__add {
         display: inline-block;
         position: absolute;
         @include flexCenter;
@@ -21,6 +21,11 @@
         width: 38px;
         background-color: #50C878;
         border: 1px solid;
+    }
+    .todos__error {
+        text-align: center;
+        font-size: 0.8rem;
+        color: salmon;
     }
 }
 .todos__list-container {
