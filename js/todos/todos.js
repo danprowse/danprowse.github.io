@@ -13,12 +13,15 @@ export class todos {
       // TODO: check user input
       let todo = todoInput.value;
       currentTodos.push(todo);
-      //   const li = document.createElement("li");
-      //   li.appendChild(document.createTextNode(todo));
       const li = listComponent(todo);
-      todoList.innerHTML = li;
+      todoList.innerHTML += li;
+      todoInput.value = '';
     }
   }
-  deleteTodo() {}
-  toggleCompleteTodo() {}
+  deleteTodo() {
+      console.log('delete todo')
+  }
+  toggleCompleteTodo() {
+      console.log('complete todo')
+  }
 }

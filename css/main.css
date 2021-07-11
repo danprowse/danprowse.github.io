@@ -73,7 +73,7 @@ button {
 
 .todos__input-container input {
   width: 100%;
-  padding: 0.5rem 40px 0.5rem 0.5rem;
+  padding: 0.3rem 40px 0.3rem 0.3rem;
   outline: none;
   margin-top: 1rem;
   font-size: inherit;
@@ -94,10 +94,11 @@ button {
   font-size: 1rem;
   top: 1rem;
   right: 0;
-  height: 38px;
-  width: 38px;
-  background-color: #50C878;
-  border: 1px solid;
+  height: 30px;
+  width: 30px;
+  background-color: #545451;
+  border: 1px solid #000;
+  color: #eee;
 }
 
 .todos__input-container .todos__error {
@@ -113,6 +114,40 @@ button {
 
 .todos__list-container li {
   list-style: none;
+  position: relative;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.25rem 4.5rem 0.25rem 0.25rem;
+  background-color: #fefefe;
+}
+
+.todos__list-container li .fa-check {
+  position: absolute;
+  right: 1.9rem;
+  top: 0;
+  padding: 0.5rem;
+  background-color: #50c878;
+  color: #eee;
+  width: 30px;
+}
+
+.todos__list-container li .fa-times {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.5rem;
+  background-color: salmon;
+  color: #eee;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 * {
@@ -123,7 +158,7 @@ button {
 }
 
 html {
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   color: #333;

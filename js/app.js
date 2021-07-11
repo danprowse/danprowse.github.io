@@ -6,6 +6,7 @@ const sessionSelectButtons = document.querySelectorAll("[data-time]");
 const btnStart = document.querySelector(".btn__start");
 const btnStop = document.querySelector(".btn__stop");
 const todoAdd = document.querySelector(".todos__add");
+
 // init classes
 const Timer = new timer();
 const Todos = new todos();
@@ -15,4 +16,18 @@ sessionSelectButtons.forEach((button) =>
 );
 btnStart.addEventListener("click", () => Timer.startTimer());
 btnStop.addEventListener("click", () => Timer.resetTimer());
-todoAdd.addEventListener("click", () => Todos.addTodo());
+todoAdd.addEventListener("click", () =>  { 
+  Todos.addTodo();
+  addTodoEvents();
+});
+
+function addTodoEvents() {
+  const todoComplete = document.querySelectorAll(".complete");
+  const todoDelete = document.querySelectorAll(".delete");
+  [...todoComplete].forEach((ele) => {
+    ele.addEventListener("click", () => Todos.toggleCompleteTodo());
+  });
+  [...todoDelete].forEach((ele) => {
+    ele.addEventListener("click", () => Todos.deleteTodo());
+  });
+}

@@ -1,41 +1,65 @@
 .todos {
-    min-width: 300px;
+  min-width: 300px;
 }
 .todos__input-container {
+  position: relative;
+  input {
+    width: 100%;
+    padding: 0.3rem 40px 0.3rem 0.3rem;
+    outline: none;
+    margin-top: 1rem;
+    font-size: inherit;
+  }
+  .todos__add {
+    display: inline-block;
+    position: absolute;
+    @include flexCenter;
+    font-size: 1rem;
+    top: 1rem;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #545451;
+    border: 1px solid #000;
+    color: #eee;
+  }
+  .todos__error {
+    text-align: center;
+    font-size: 0.8rem;
+    color: salmon;
+  }
+}
+
+.todos__list-container {
+  p {
+    text-align: center;
+    margin: 0.5rem;
+  }
+  li {
+    list-style: none;
     position: relative;
-    input {
-        width: 100%;
-        padding: 0.5rem 40px 0.5rem 0.5rem;
-        outline: none;
-        margin-top: 1rem;
-        font-size: inherit;
-    }
-    .todos__add {
-        display: inline-block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.25rem 4.5rem 0.25rem 0.25rem;
+    background-color: #fefefe;
+    .fa-check {
         position: absolute;
-        @include flexCenter;
-        font-size: 1rem;
-        top: 1rem;
+        right: 1.9rem;
+        top: 0;
+        padding: 0.5rem;
+        background-color: #50c878;
+        color: #eee;
+        width: 30px;
+    }
+    .fa-times {
+        position: absolute;
         right: 0;
-        height: 38px;
-        width: 38px;
-        background-color: #50C878;
-        border: 1px solid;
+        top: 0;
+        padding: 0.5rem;
+        background-color: salmon;
+        color: #eee;
+        width: 30px;
+        @include flexCenter;
     }
-    .todos__error {
-        text-align: center;
-        font-size: 0.8rem;
-        color: salmon;
-    }
-}
-.todos__list-container {
-    p {
-        text-align: center;
-        margin: 0.5rem;
-    }
-}
-.todos__list-container {
-    li {
-        list-style: none;
-    }
+  }
 }
