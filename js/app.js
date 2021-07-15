@@ -1,33 +1,45 @@
 // imports
 import { timer } from "./timer/timer.js";
-import { todos } from "./todos/todos.js";
+
 // constants / variables
 const sessionSelectButtons = document.querySelectorAll("[data-time]");
 const btnStart = document.querySelector(".btn__start");
 const btnStop = document.querySelector(".btn__stop");
-const todoAdd = document.querySelector(".todos__add");
+const addTodo = document.querySelector(".todos__add");
 
 // init classes
 const Timer = new timer();
-const Todos = new todos();
 // events
 sessionSelectButtons.forEach((button) =>
   button.addEventListener("click", Timer.setTimer)
 );
 btnStart.addEventListener("click", () => Timer.startTimer());
 btnStop.addEventListener("click", () => Timer.resetTimer());
-todoAdd.addEventListener("click", () =>  { 
-  Todos.addTodo();
-  addTodoEvents();
-});
 
-function addTodoEvents() {
-  const todoComplete = document.querySelectorAll(".complete");
-  const todoDelete = document.querySelectorAll(".delete");
-  [...todoComplete].forEach((ele) => {
-    ele.addEventListener("click", () => Todos.toggleCompleteTodo());
+addTodo.onclick = () => {
+  if (document.querySelector(".todos__input").value.length == 0) {
+    document.querySelector(".todos__error").textContent = "Enter a Task.";
+  } else {
+    // adding task
+    document.querySelector(".todos__list").innerHTML += `
+            <li>
+              ${document.querySelector(".todos__input").value}
+              <i class="fas fa-check complete"></i>
+              <i class="fas fa-times delete"></i>
+            </li>
+    `;
+  }
+  const deleteIcons = document.querySelectorAll(".delete");
+  deleteIcons.forEach((icon) => {
+    icon.onclick = function () {
+      this.parentNode.remove();
+    };
   });
-  [...todoDelete].forEach((ele) => {
-    ele.addEventListener("click", () => Todos.deleteTodo());
+  const completeIcons = document.querySelectorAll(".complete");
+  completeIcons.forEach((icon) => {
+    icon.onclick = function () {
+      this.parentNode.classList.toggle("completed");
+    };
   });
-}
+  document.querySelector(".todos__input").value = "";
+};

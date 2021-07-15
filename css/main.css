@@ -121,6 +121,10 @@ button {
   background-color: #fefefe;
 }
 
+.todos__list-container li.completed {
+  text-decoration: line-through;
+}
+
 .todos__list-container li .fa-check {
   position: absolute;
   right: 1.9rem;

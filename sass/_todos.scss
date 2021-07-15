@@ -42,6 +42,9 @@
     margin: 0.5rem 0;
     padding: 0.25rem 4.5rem 0.25rem 0.25rem;
     background-color: #fefefe;
+    &.completed {
+      text-decoration: line-through;
+    }
     .fa-check {
         position: absolute;
         right: 1.9rem;
