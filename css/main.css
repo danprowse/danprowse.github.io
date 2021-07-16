@@ -66,6 +66,8 @@ button {
 .todos {
   width: 100%;
   max-width: 400px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .todos__input-container {
@@ -74,14 +76,35 @@ button {
 
 .todos__input-container input {
   width: 100%;
-  padding: 0.3rem 40px 0.3rem 0.3rem;
+  height: 35px;
+  padding: 0.3rem 40px 0.3rem 1rem;
   outline: none;
   margin-top: 1rem;
   font-size: inherit;
+  border-radius: 10px;
+  border: 2px solid #141829;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.todos__input-container input:focus {
+  border-color: #F572B0;
+}
+
+.todos__input-container input:focus + .todos__add {
+  border-color: #F572B0;
+  background-color: #F572B0;
+}
+
+.todos__input-container input:focus + .todos__add:hover {
+  background-color: #f35aa3;
+  border-color: #f35aa3;
 }
 
 .todos__input-container .todos__add {
   display: inline-block;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,11 +118,14 @@ button {
   font-size: 1rem;
   top: 1rem;
   right: 0;
-  height: 30px;
-  width: 30px;
-  background-color: #545451;
-  border: 1px solid #000;
+  height: 35px;
+  width: 35px;
+  background-color: #141829;
   color: #eee;
+  border-top: 2px solid #141829;
+  border-right: 2px solid #141829;
+  border-bottom: 2px solid #141829;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .todos__input-container .todos__error {
