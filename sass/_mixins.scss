@@ -1,12 +1,18 @@
 // mixins help to keep our code DRY.
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin mq($size) {
-    @media only screen and (min-width: $size) {
-        @content;
-    }
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
 }

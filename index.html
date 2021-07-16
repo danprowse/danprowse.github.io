@@ -6,43 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PomoTodo</title>
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="heading">
-      <h1>PomoTodo</h1>
-    </div>
-    <section class="timer-container">
-      <div class="timer-buttons">
-        <button class="btn btn__start">Start</button>
-        <button class="btn btn__stop">Reset</button>
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="#F572B0"
+        d="M39.8,-49.4C54.6,-44,71.7,-36.4,80.2,-23C88.8,-9.6,88.9,9.7,78,19.8C67.1,29.9,45.1,30.8,30.2,38.1C15.4,45.4,7.7,59,-4.9,65.7C-17.4,72.4,-34.9,72.2,-45.8,63.6C-56.7,55.1,-61.1,38.2,-66.3,21.7C-71.5,5.1,-77.5,-11,-76.1,-27.6C-74.7,-44.3,-65.9,-61.4,-52,-67.1C-38.1,-72.8,-19,-67.1,-3.3,-62.6C12.5,-58.1,25,-54.8,39.8,-49.4Z"
+        transform="translate(100 100)"
+      />
+    </svg>
+    <div class="app-container">
+      <div class="heading">
+        <h1>PomoTodo</h1>
       </div>
-      <div class="display">
-        <p class="display__time-left"></p>
-        <p class="display__time-end"></p>
-      </div>
-      <div class="timer-setting-btns">
-        <button data-time="1500">PomoTime</button>
-        <button data-time="900">Break Long</button>
-        <button data-time="300">Break Short</button>
-      </div>
-      <div class="session-counters">
-        <p>Sessions: <span class="pomo-counter"></span></p>
-        <p>Breaks: <span class="break-counter"></span></p>
-      </div>
-    </section>
+      <div class="container">
+        <section class="timer-container">
+          <div class="timer-buttons">
+            <button class="btn btn__start">Start</button>
+            <button class="btn btn__stop">Reset</button>
+          </div>
+          <div class="display">
+            <p class="display__time-left"></p>
+            <p class="display__time-end"></p>
+          </div>
+          <div class="timer-setting-btns">
+            <button data-time="1100">PomoTime</button>
+            <button data-time="900">Break Long</button>
+            <button data-time="300">Break Short</button>
+          </div>
+          <div class="session-counters">
+            <p>Sessions: <span class="pomo-counter"></span></p>
+            <p>Breaks: <span class="break-counter"></span></p>
+          </div>
+        </section>
 
-    <section class="todos">
-      <div class="todos__input-container">
-          <input class="todos__input" type="text" placeholder="Enter a task">
-          <i class="fas fa-plus todos__add"></i>
-          <p class="todos__error"></p>
+        <section class="todos">
+          <div class="todos__input-container">
+            <input
+              class="todos__input"
+              type="text"
+              placeholder="Enter a task"
+            />
+            <i class="fas fa-plus todos__add"></i>
+            <p class="todos__error"></p>
+          </div>
+          <div class="todos__list-container">
+            <p class="todos__hint">Your todos will show below</p>
+            <ul class="todos__list"></ul>
+          </div>
+        </section>
       </div>
-      <div class="todos__list-container">
-        <p class="todos__hint">Your todos will show below</p>
-        <ul class="todos__list"></ul>
-      </div>
-    </section>
+    </div>
 
     <script type="module" src="/js/app.js" type="module"></script>
   </body>
