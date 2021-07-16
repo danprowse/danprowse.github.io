@@ -12,8 +12,8 @@
     outline: none;
     margin-top: 1rem;
     font-size: inherit;
-    border-radius: 10px;
-    border: 2px solid $body-bg;
+    border-radius: 20px;
+    border: 1px solid $body-bg;
     transition: all .3s ease-in-out;
     &:focus {
       border-color: #F572B0;
@@ -39,10 +39,10 @@
     width: 35px;
     background-color: $body-bg;
     color: #eee;
-    border-top: 2px solid $body-bg;
-    border-right: 2px solid $body-bg;
-    border-bottom: 2px solid $body-bg;
-    border-radius: 0px 10px 10px 0px;
+    border-top: 1px solid $body-bg;
+    border-right: 1px solid $body-bg;
+    border-bottom: 1px solid $body-bg;
+    border-radius: 0px 20px 20px 0px;
   }
   .todos__error {
     text-align: center;

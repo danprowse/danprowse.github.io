@@ -81,8 +81,8 @@ button {
   outline: none;
   margin-top: 1rem;
   font-size: inherit;
-  border-radius: 10px;
-  border: 2px solid #141829;
+  border-radius: 20px;
+  border: 1px solid #141829;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
@@ -122,10 +122,10 @@ button {
   width: 35px;
   background-color: #141829;
   color: #eee;
-  border-top: 2px solid #141829;
-  border-right: 2px solid #141829;
-  border-bottom: 2px solid #141829;
-  border-radius: 0px 10px 10px 0px;
+  border-top: 1px solid #141829;
+  border-right: 1px solid #141829;
+  border-bottom: 1px solid #141829;
+  border-radius: 0px 20px 20px 0px;
 }
 
 .todos__input-container .todos__error {
