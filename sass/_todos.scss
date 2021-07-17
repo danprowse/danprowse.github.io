@@ -2,6 +2,14 @@
   width: 100%;
   max-width: 400px;
   align-self: flex-start;
+  margin: 1rem;
+  h2 {
+    text-align: center;
+  }
+  @include mobile {
+    margin-top: 2rem;
+    align-self: center;
+  }
 }
 .todos__input-container {
   position: relative;
@@ -15,6 +23,7 @@
     border-radius: 20px;
     border: 1px solid $body-bg;
     transition: all .3s ease-in-out;
+    font-family: inherit;
     &:focus {
       border-color: #F572B0;
       & + .todos__add {

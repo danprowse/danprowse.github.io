@@ -1,7 +1,6 @@
 .timer-container {
   height: 300px;
-  // min-width: 300px;
-  // margin: 1rem;
+  margin: 1rem;
   @include flexCenter;
   flex-direction: column;
   width: 100%;

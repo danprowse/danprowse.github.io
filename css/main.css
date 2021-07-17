@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins&display=swap");
 .timer-container {
   height: 300px;
+  margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,6 +69,20 @@ button {
   max-width: 400px;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  margin: 1rem;
+}
+
+.todos h2 {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .todos {
+    margin-top: 2rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .todos__input-container {
@@ -85,6 +100,7 @@ button {
   border: 1px solid #141829;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  font-family: inherit;
 }
 
 .todos__input-container input:focus {
@@ -236,6 +252,8 @@ body {
   background-color: rgba(32, 40, 71, 0.8);
   min-height: 600px;
   border-radius: 10px;
+  position: relative;
+  color: #ddd;
 }
 
 .container {
@@ -251,14 +269,45 @@ body {
           justify-content: space-evenly;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 h1,
 h2 {
-  font-family: "Roboto Slab", serif;
-  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+  color: #ddd;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 button {
-  font-family: "Roboto Slab", serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   outline: none;
   border: 1px solid #333;
@@ -270,5 +319,11 @@ svg {
   top: 10px;
   left: 10px;
   z-index: -1;
+}
+
+.heading {
+  position: absolute;
+  top: 0;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
