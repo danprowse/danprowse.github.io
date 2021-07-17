@@ -90,6 +90,8 @@ button {
 }
 
 .todos__input-container input {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ddd;
   width: 100%;
   height: 35px;
   padding: 0.3rem 40px 0.3rem 1rem;
@@ -98,8 +100,8 @@ button {
   font-size: inherit;
   border-radius: 20px;
   border: 1px solid #141829;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-family: inherit;
 }
 
@@ -108,19 +110,17 @@ button {
 }
 
 .todos__input-container input:focus + .todos__add {
-  border-color: #F572B0;
-  background-color: #F572B0;
+  border-color: #f896c4;
 }
 
 .todos__input-container input:focus + .todos__add:hover {
-  background-color: #f35aa3;
-  border-color: #f35aa3;
+  color: #F572B0;
 }
 
 .todos__input-container .todos__add {
   display: inline-block;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,18 +136,20 @@ button {
   right: 0;
   height: 35px;
   width: 35px;
-  background-color: #141829;
-  color: #eee;
+  color: #ddd;
   border-top: 1px solid #141829;
   border-right: 1px solid #141829;
   border-bottom: 1px solid #141829;
   border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
 }
 
 .todos__input-container .todos__error {
   text-align: center;
-  font-size: 0.8rem;
-  color: salmon;
+  font-size: 0.75rem;
+  color: #F572B0;
+  margin: 0.2rem;
+  font-style: italic;
 }
 
 .todos__list-container p {
@@ -159,9 +161,14 @@ button {
   list-style: none;
   position: relative;
   width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.25rem 4.5rem 0.25rem 0.25rem;
-  background-color: #fefefe;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 4.5rem 0.3rem 0.5rem;
+  color: #ddd;
+  border-bottom: 1px solid rgba(245, 114, 176, 0.5);
+}
+
+.todos__list-container li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .todos__list-container li.completed {
@@ -170,22 +177,33 @@ button {
 
 .todos__list-container li .fa-check {
   position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   right: 1.9rem;
   top: 0;
+  bottom: 0;
   padding: 0.5rem;
-  background-color: #50c878;
-  color: #eee;
+  color: #F572B0;
   width: 30px;
+  cursor: pointer;
+}
+
+.todos__list-container li .fa-check:hover {
+  color: #f896c4;
 }
 
 .todos__list-container li .fa-times {
   position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   right: 0;
   top: 0;
+  bottom: 0;
   padding: 0.5rem;
-  background-color: salmon;
-  color: #eee;
+  color: #ddd;
   width: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,6 +213,11 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+}
+
+.todos__list-container li .fa-times:hover {
+  color: white;
 }
 
 * {
@@ -229,7 +252,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden;
 }
 
 .app-container {
@@ -267,6 +289,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-top: 35px;
 }
 
 @media (max-width: 1024px) {

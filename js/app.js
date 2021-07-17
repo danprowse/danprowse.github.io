@@ -18,7 +18,7 @@ btnStop.addEventListener("click", () => Timer.resetTimer());
 
 addTodo.onclick = () => {
   if (document.querySelector(".todos__input").value.length == 0) {
-    document.querySelector(".todos__error").textContent = "Enter a Task.";
+    document.querySelector(".todos__error").innerHTML = 'Enter a todo e.g., Book holiday flights <i class="fab fa-telegram-plane"></i>';
   } else {
     // adding task
     document.querySelector(".todos__list").innerHTML += `
