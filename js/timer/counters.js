@@ -11,11 +11,11 @@ function updateCounters(minutes = 0) {
   switch (minutes) {
     case 5:
     case 15:
-      ++breakCounter;
+      breakCounter++;
       breakCounterUI.textContent = breakCounter;
       break;
     case 25:
-      ++pomCounter;
+      pomCounter++;
       pomoCounterUI.textContent = pomCounter;
       break;
   }

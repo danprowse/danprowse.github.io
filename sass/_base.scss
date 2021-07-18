@@ -1,6 +1,5 @@
 // base styles
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins&display=swap');
-// font-family: 'Nunito', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 // font-family: 'Poppins', sans-serif;
 
 * {
@@ -29,9 +28,9 @@ body {
   flex-direction: column;
   width: 60%;
   min-width: 300px;
+  min-height: 500px;
   padding: 1rem;
   background-color: rgba(32, 40, 71, .8);
-  min-height: 600px;
   border-radius: 10px;
   position: relative;
   color: $text-white;
@@ -48,7 +47,7 @@ body {
 }
 h1,
 h2 {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: $text-white;
 }
 h1 {
@@ -60,17 +59,16 @@ h1 {
 }
 h2 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   @include mobile {
     font-size: 1.5rem;
   }
 }
 button {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
+  font-size: 0.9rem;
   outline: none;
-  border: 1px solid #333;
   cursor: pointer;
+  // text-transform: uppercase;
 }
 svg {
     position: absolute;

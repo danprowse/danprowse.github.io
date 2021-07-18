@@ -21,6 +21,11 @@
       <div class="container">
         <section class="timer-container">
           <h2 class="secttion-title">Timer</h2>
+          <div class="timer-setting-btns">
+            <button data-time="1500">PomoTime</button>
+            <button data-time="900">Break Long</button>
+            <button data-time="300">Break Short</button>
+          </div>
           <div class="timer-buttons">
             <button class="btn btn__start">Start</button>
             <button class="btn btn__stop">Reset</button>
@@ -28,11 +33,6 @@
           <div class="display">
             <p class="display__time-left"></p>
             <p class="display__time-end"></p>
-          </div>
-          <div class="timer-setting-btns">
-            <button data-time="1100">PomoTime</button>
-            <button data-time="900">Break Long</button>
-            <button data-time="300">Break Short</button>
           </div>
           <div class="session-counters">
             <p>Sessions: <span class="pomo-counter"></span></p>
@@ -47,8 +47,8 @@
               class="todos__input"
               type="text"
               placeholder="Enter a task"
-              />
-              <i class="fas fa-plus todos__add"></i>
+            />
+            <i class="fas fa-plus todos__add"></i>
             <p class="todos__error"></p>
           </div>
           <div class="todos__list-container">

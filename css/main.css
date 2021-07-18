@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 .timer-container {
   height: 300px;
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,11 +57,27 @@
 }
 
 button {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin: 0.25rem;
   padding: 0.5rem 0;
+  color: #545454;
+  border-radius: 5px;
+  border: 1px solid #141829;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: inherit;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #545454;
+}
+
+button:hover {
+  background-color: #F572B0;
+  color: #ddd;
+  border-color: #ddd;
+  bottom: 1px;
 }
 
 .todos {
@@ -69,7 +85,7 @@ button {
   max-width: 400px;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
 }
 
 .todos h2 {
@@ -96,12 +112,31 @@ button {
   height: 35px;
   padding: 0.3rem 40px 0.3rem 1rem;
   outline: none;
-  font-size: inherit;
   border-radius: 20px;
   border: 1px solid #141829;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-family: inherit;
+}
+
+.todos__input-container input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #545454;
+}
+
+.todos__input-container input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #545454;
+}
+
+.todos__input-container input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #545454;
+}
+
+.todos__input-container input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #545454;
 }
 
 .todos__input-container input:focus {
@@ -276,9 +311,9 @@ body {
           flex-direction: column;
   width: 60%;
   min-width: 300px;
+  min-height: 500px;
   padding: 1rem;
   background-color: rgba(32, 40, 71, 0.8);
-  min-height: 600px;
   border-radius: 10px;
   position: relative;
   color: #ddd;
@@ -309,7 +344,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #ddd;
 }
 
@@ -326,7 +361,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 @media (max-width: 1024px) {
@@ -336,10 +371,8 @@ h2 {
 }
 
 button {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
+  font-size: 0.9rem;
   outline: none;
-  border: 1px solid #333;
   cursor: pointer;
 }
 
