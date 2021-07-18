@@ -26,7 +26,7 @@ body {
 .app-container {
   @include flexCenter;
   flex-direction: column;
-  width: 60%;
+  width: 70%;
   min-width: 300px;
   min-height: 500px;
   padding: 1rem;
@@ -69,12 +69,6 @@ button {
   outline: none;
   cursor: pointer;
   // text-transform: uppercase;
-}
-svg {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: -1;
 }
 .heading {
   position: absolute;
