@@ -7,20 +7,19 @@
     text-align: center;
   }
   @include mobile {
-    margin-top: 2rem;
+    margin: 1rem 0 0 0;
     align-self: center;
   }
 }
 .todos__input-container {
   position: relative;
   input {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, 0.1);
     color: $text-white;
     width: 100%;
     height: 35px;
     padding: 0.3rem 40px 0.3rem 1rem;
     outline: none;
-    margin-top: 1rem;
     font-size: inherit;
     border-radius: 20px;
     border: 1px solid $body-bg;
@@ -42,7 +41,7 @@
     position: absolute;
     @include flexCenter;
     font-size: 1rem;
-    top: 1rem;
+    top: 0;
     right: 0;
     height: 35px;
     width: 35px;
@@ -63,30 +62,20 @@
 }
 
 .todos__list-container {
-  p {
-    text-align: center;
-    margin: 0.5rem;
-  }
   .todos__list {
-    // & li:first-of-type {
-    //   border-top-left-radius: 5px;
-    // }
-    // & li:last-of-type {
-    //   border-bottom-right-radius: 5px;
-    // }
+    margin-top: 1rem;
   }
   li {
     list-style: none;
     position: relative;
     width: 100%;
     // margin: 0.5rem 0;
-    background-color: rgba(255, 255, 255, .1);
     padding: 0.3rem 4.5rem 0.3rem 0.5rem;
     color: $text-white;
-    border-bottom: 1px solid rgba(245, 114, 176, .5);
+    border-bottom: 1px solid rgba(245, 114, 176, 0.5);
     // border-radius: 20px;
     &:hover {
-      background-color: rgba(255, 255, 255, .2);
+      background-color: rgba(255, 255, 255, 0.1);
     }
     &.completed {
       text-decoration: line-through;
@@ -100,6 +89,7 @@
       padding: 0.5rem;
       color: $primary;
       width: 30px;
+      @include flexCenter;
       cursor: pointer;
       &:hover {
         color: $hover-primary-accent;
