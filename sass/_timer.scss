@@ -13,14 +13,14 @@
     font-size: 6rem;
   }
 }
-.session-counters {
+.counters {
   width: 100%;
   display: flex;
   justify-content: space-around;
   margin: 0.5rem 0;
 }
-.timer-setting-btns,
-.timer-buttons {
+.timer__settings,
+.timer__buttons {
   display: flex;
   width: 100%;
 }

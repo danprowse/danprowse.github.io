@@ -4,9 +4,7 @@ let countdown;
 const DEFAULT_POMO_TIMER = 25;
 let selectedTimeInMins = DEFAULT_POMO_TIMER;
 let timerActive = false;
-
 const timerDisplay = document.querySelector(".display__time-left");
-const endTime = document.querySelector(".display__time-end");
 
 export class timer {
   constructor() {

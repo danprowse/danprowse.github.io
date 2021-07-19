@@ -4,8 +4,8 @@ import { newTodo } from "./todo/todos.js";
 
 // constants / variables
 const sessionSelectButtons = document.querySelectorAll("[data-time]");
-const btnStart = document.querySelector(".btn__start");
-const btnStop = document.querySelector(".btn__stop");
+const btnStart = document.querySelector(".timer__btn-start");
+const btnStop = document.querySelector(".timer__btn-stop");
 
 const addTodo = document.querySelector(".todos__add");
 const todoInput = document.querySelector(".todos__input");

@@ -1,5 +1,5 @@
-const pomoCounterUI = document.querySelector(".pomo-counter");
-const breakCounterUI = document.querySelector(".break-counter");
+const pomoCounterUI = document.querySelector(".counters__pomo");
+const breakCounterUI = document.querySelector(".counters__break");
 let pomCounter = 0;
 let breakCounter = 0;
 

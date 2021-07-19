@@ -38,7 +38,7 @@
   font-size: 6rem;
 }
 
-.session-counters {
+.counters {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,8 +48,8 @@
   margin: 0.5rem 0;
 }
 
-.timer-setting-btns,
-.timer-buttons {
+.timer__settings,
+.timer__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,7 +371,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ddd;
 }
 
