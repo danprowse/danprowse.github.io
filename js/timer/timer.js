@@ -31,6 +31,7 @@ export class timer {
         // check if we need to stop
         if (secondsLeft < 0) {
           clearInterval(countdown);
+          updateCounters(selectedTimeInMins);
           timerActive = false;
           if (selectedTimeInMins > DEFAULT_LONG_BREAK) {
             if (pomCounter % 3 === 0) {
