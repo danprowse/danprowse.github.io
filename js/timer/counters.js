@@ -21,4 +21,4 @@ function updateCounters(minutes = 0) {
   }
 }
 
-export { updateCounters, init };
+export { updateCounters, init, pomCounter };

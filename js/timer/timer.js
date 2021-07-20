@@ -1,9 +1,8 @@
-import { updateCounters, init } from "./counters.js";
+import { updateCounters, init, pomCounter } from "./counters.js";
 
 let countdown;
 const DEFAULT_POMO_TIMER = 25;
 let selectedTimeInMins = DEFAULT_POMO_TIMER;
-let pomoSessions = 2;
 let timerActive = false;
 const timerDisplay = document.querySelector(".display__time-left");
 
@@ -31,16 +30,13 @@ export class timer {
         if (secondsLeft < 0) {
           clearInterval(countdown);
           timerActive = false;
-          updateCounters(selectedTimeInMins);
-          pomoSessions++;
-          // if greater than break amount
           if (selectedTimeInMins > 15) {
-            if(pomoSessions % 3 === 0) {
+            if (pomCounter % 3 === 0) {
               selectedTimeInMins = 15;
             } else {
               selectedTimeInMins = 5;
             }
-          } 
+          }
           this.displayTimeLeft();
           return;
         }
