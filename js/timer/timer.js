@@ -53,11 +53,9 @@ export class timer {
   setTimer() {
     if (!timerActive) {
       selectedTimeInMins = this.dataset.time / 60;
-      console.log(this.dataset.time / 60);
       timerDisplay.textContent = `${
         selectedTimeInMins < 10 ? `0` : ""
       }${selectedTimeInMins}:00`;
-      console.log(selectedTimeInMins);
     }
   }
 
@@ -76,6 +74,5 @@ export class timer {
       remainderSeconds < 10 ? `0` : ""
     }${remainderSeconds}`;
     timerDisplay.textContent = display;
-    console.log({ minutes, remainderSeconds });
   }
 }
