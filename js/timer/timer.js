@@ -2,6 +2,8 @@ import { updateCounters, init, pomCounter } from "./counters.js";
 
 let countdown;
 const DEFAULT_POMO_TIMER = 25;
+const DEFAULT_LONG_BREAK = 15;
+const DEFAULT_SHORT_BREAK = 5;
 let selectedTimeInMins = DEFAULT_POMO_TIMER;
 let timerActive = false;
 const timerDisplay = document.querySelector(".display__time-left");
@@ -30,11 +32,11 @@ export class timer {
         if (secondsLeft < 0) {
           clearInterval(countdown);
           timerActive = false;
-          if (selectedTimeInMins > 15) {
+          if (selectedTimeInMins > DEFAULT_LONG_BREAK) {
             if (pomCounter % 3 === 0) {
-              selectedTimeInMins = 15;
+              selectedTimeInMins = DEFAULT_LONG_BREAK;
             } else {
-              selectedTimeInMins = 5;
+              selectedTimeInMins = DEFAULT_SHORT_BREAK;
             }
           }
           this.displayTimeLeft();
@@ -66,7 +68,6 @@ export class timer {
     }${selectedTimeInMins}:00`;
   }
 
-  // display time left
   displayTimeLeft(seconds = selectedTimeInMins * 60) {
     const minutes = Math.floor(seconds / 60);
     const remainderSeconds = seconds % 60;
