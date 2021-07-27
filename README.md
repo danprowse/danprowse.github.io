@@ -3,10 +3,10 @@
 PomoTodo is a side project of mine that combines the functionality of a Pomodoro Timer and a To-do list. 
 ## Motivation
 
-To help myself stay organized, motivated and to not self inflict burnout I regularly use the 
+To help myself stay organized and motivated I regularly use the 
 Pomodoro technique to break my work load down into manageable chunks.
 
-So what better way to practice my skills by building my own Pomodoro timer combined with a to-do list.
+So what better way to practice my coding skills by building my own Pomodoro timer combined with a to-do list.
 
 ## Tools & Languages
 
@@ -20,7 +20,7 @@ So what better way to practice my skills by building my own Pomodoro timer combi
 
 The main takeaways for me from this project include:
 
-1. Reusable CSS styling, better known as SASS mixins.
+1. Reusable CSS styling, better known as SASS Mixins.
 2. Javascript refresher.
     
     2.1 Using modules to separate concerns within my code.
