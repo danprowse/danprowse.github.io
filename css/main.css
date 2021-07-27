@@ -38,6 +38,14 @@
   font-size: 6rem;
 }
 
+.display .display__time-left.active-pomo {
+  color: #F4AC45;
+}
+
+.display .display__time-left.active-break {
+  color: #337357;
+}
+
 .counters {
   width: 100%;
   display: -webkit-box;

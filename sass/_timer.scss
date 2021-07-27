@@ -11,6 +11,12 @@
   @include flexCenter;
   .display__time-left {
     font-size: 6rem;
+    &.active-pomo {
+      color: #F4AC45;
+    }
+    &.active-break {
+      color: #337357;
+    }
   }
 }
 .counters {

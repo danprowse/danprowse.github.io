@@ -23,7 +23,7 @@ The main takeaways for me from this project include:
 1. Reusable CSS styling, better known as SASS Mixins.
 2. Javascript refresher.
     
-    2.1 Using modules to separate concerns within my code.
+    2.1 Using modules to separate concerns.
     
     2.2 Manipulating the DOM.
 

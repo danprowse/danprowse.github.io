@@ -23,7 +23,7 @@ export class timer {
       const seconds = selectedTimeInMins * 60;
       const then = now + seconds * 1000;
       this.displayTimeLeft(seconds);
-
+      this.toggleTimerActiveStyling(selectedTimeInMins);
       countdown = setInterval(() => {
         const secondsLeft = Math.round((then - Date.now()) / 1000);
         timerActive = true;
@@ -32,6 +32,7 @@ export class timer {
         if (secondsLeft < 0) {
           clearInterval(countdown);
           updateCounters(selectedTimeInMins);
+          this.toggleTimerActiveStyling(selectedTimeInMins);
           timerActive = false;
           if (selectedTimeInMins > DEFAULT_LONG_BREAK) {
             if (pomCounter % 3 === 0) {
@@ -61,6 +62,9 @@ export class timer {
 
   resetTimer() {
     clearInterval(countdown);
+    if(timerActive) {
+      this.toggleTimerActiveStyling(selectedTimeInMins);
+    }
     timerActive = false;
     timerDisplay.textContent = `${
       selectedTimeInMins < 10 ? `0` : ""
@@ -74,5 +78,17 @@ export class timer {
       remainderSeconds < 10 ? `0` : ""
     }${remainderSeconds}`;
     timerDisplay.textContent = display;
+  }
+
+  toggleTimerActiveStyling(mins){
+    switch (mins) {
+      case 5:
+      case 15:
+        timerDisplay.classList.toggle("active-break");
+        break;
+      case 25:
+        timerDisplay.classList.toggle("active-pomo");
+        break;
+    }
   }
 }
